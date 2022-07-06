@@ -1,0 +1,114 @@
+@import '../../../styles/settings.scss';
+
+
+.root {
+  padding: 120px 30px 60px 30px;
+  @include flex(column, left, left);
+
+  .orderSummary {
+    @include flex(column, left, left);
+    margin-bottom: 30px;
+
+    .itemContainer {
+      @include flex(row, left, left);
+      margin-bottom: 10px;
+      gap: 20px;
+
+      .itemImg {
+        height: 150px;
+        width: 130px;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .itemDetails {
+        min-width: 200px;
+
+        p {
+          font-size: $base-size - 2;
+
+          &:first-child {
+            font-weight: 700;
+          }
+          &:nth-child(2) {
+            color: $color-gray;
+          }
+        }
+      }
+    }
+
+    .priceSummary {
+      p {
+        color: $color-gray;
+
+        span {
+          color: $color-dark;
+        }
+      }
+
+      .grandTotal {
+        color: $color-dark;
+
+        span {
+          font-size: $base-size + 3;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    margin: 30px 0;
+
+    a {
+      text-decoration: none;
+      margin-left: 20px;
+      color: black;
+      font-weight: 700;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+
+  .form {
+    @include flex(column, left, left);
+    gap: 20px;
+    width: 50%;
+
+    input {
+      padding: 15px;
+      border: 1px solid $color-gray;
+      outline: none;
+      width: 100%;
+    }
+
+    select {
+      padding: 10px;
+      border: 1px solid $color-gray;
+      outline: none;
+      width: 100%;
+      color: $color-dark-gray;
+    }
+
+    textarea {
+      outline: none;
+      border: 1px solid $color-gray;
+      padding: 10px;
+    }
+
+    .doubleInput {
+      width: 100%;
+      @include flex(row, space-between, center);
+      gap: 10px;
+    }
+    .error {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  position: relative;
+  .banner {
+    position: absolute;
+    right: 20%;
+    top: 45%;
+    padding: 10px 25px;
+
+    p {
+      span {
+        font-size: $base-size * 2;
+        margin: 20px;
+      }
+
+      font-size: $base-size + 30;
+      font-weight: 500;
+      word-spacing: 4px;
+      color: black;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .root {
+    .banner {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+
+      p {
+        span {
+          font-size: $base-size * 2;
+        }
+        font-size: $base-size + 3;
+      }
+    }
+  }
+}

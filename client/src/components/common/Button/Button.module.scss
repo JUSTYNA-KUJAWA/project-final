@@ -1,0 +1,23 @@
+
+@import '../../../styles/settings.scss';
+
+.button {
+  background-color: rgb(244, 212, 152);
+  border-radius: 2px;
+  color:black;
+  padding: 15px 15px;
+  width: 170px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: $transition;
+  margin: 24px auto 0 auto;
+  line-height: 15px;
+  background-position: 100% 0;
+  background-size: 300%;
+
+  &:hover {
+    background-color: rgb(241, 164, 136);
+  }
+}

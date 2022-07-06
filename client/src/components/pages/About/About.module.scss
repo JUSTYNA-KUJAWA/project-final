@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 120px 30px 40px 30px;
+
+  .productContainer {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px){
+  .root {
+    .imgContainer {
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
+

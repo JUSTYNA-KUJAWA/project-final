@@ -1,0 +1,31 @@
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-light: #F5F5F5;
+$color-dark: #2F3037;
+$color-gray: #afb0ba;
+$color-dark-gray: #818181;
+$brandy-punch: #d58e32;
+
+$footer-header-font-color: $color-white;
+$footer-link-font-color-nohover: $color-gray;
+$footer-link-font-color-hover: $color-white;
+$footer-claim-bg: $color-dark-gray;
+$copyright: $color-gray;
+$social-media-icons-nohover: $color-gray;
+$social-media-icons-hover: $brandy-punch;
+
+
+
+$font-text: 'Arial', serif;
+
+$radius: 5px;
+$base-size: 16px;
+$transition: all 0.8s;
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

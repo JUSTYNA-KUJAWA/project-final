@@ -1,0 +1,239 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 20px 30px;
+  z-index: 99;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background: rgb(20, 20, 20);
+  opacity: 0.6;
+  transition: $transition;
+  @include flex(row, space-around, center);
+
+  &:hover {
+    opacity: 0.5;
+    transition: $transition;
+  }
+
+  .logo {
+    min-width: 200px;
+    text-align: left;
+    color:white;
+    font-size: 20px;
+    &:hover {
+      color: orange;
+    }
+    img {
+      height: 80px;
+    }
+  }
+
+  .navLinks {
+    @include flex(row, space-between, center);
+    position: relative;
+    color:white;
+    ul {
+      display: flex;
+      padding: 0;
+      top: 50px;
+      left: 0;
+
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          display: block;
+          margin: 0 10px;
+          color:white;
+
+          &:hover {
+            color: orange;
+          }
+
+          &.active {
+            color: orange;
+          }
+        }
+      }
+    }
+    .h3{
+          color:white;
+
+          &:hover {
+            color: orange;
+          }
+
+    }
+
+    .button {
+      color: $color-dark;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      transition: $transition;
+      font-size: $base-size;
+      color:white;
+
+      &:hover {
+        color: orange;
+      }
+    }
+
+    .hamburger {
+      margin-left: 20px;
+      display: none;
+      font-size: $base-size * 4;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    .navLinks{
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(90, 90, 83);
+        top: 31px;
+        left: -20px;
+
+        li {
+          text-align: center;
+          margin: 10px;
+        }
+
+        &.isExpanded {
+          display: block;
+        }
+      }
+
+      .hamburger {
+        display: block;
+        font-size: $base-size * 3;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    .navLinks{
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(90, 90, 83);
+        top: 31px;
+        left: -20px;
+
+        li {
+          text-align: center;
+          margin: 10px;
+        }
+
+        &.isExpanded {
+          display: block;
+        }
+      }
+
+      .hamburger {
+        display: block;
+        margin-right: 110px;
+        font-size: $base-size * 2;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .root {
+    .logo{
+      font-size: 15px;
+      text-align: right;
+    }
+    .navLinks{
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(90, 90, 83);
+        top: 31px;
+        left: -20px;
+
+        li {
+          text-align: center;
+          margin: 10px;
+        }
+
+        &.isExpanded {
+          display: block;
+        }
+      }
+      .button {
+        color: $color-dark;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: $transition;
+        font-size: $base-size;
+        color:white;
+        margin-left: 0px;
+  
+        &:hover {
+          color: orange;
+        }
+      }
+      .hamburger {
+        display: block;
+        padding-right: 50px;
+        font-size: $base-size * 2;
+      }
+    }
+  }
+}
+@media (max-width: 300px) {
+  .root {
+    .logo{
+      font-size: 15px;
+      text-align: right;
+    }
+    .navLinks{
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(90, 90, 83);
+        top: 31px;
+        left: -20px;
+
+        li {
+          text-align: center;
+          margin: 10px;
+        }
+
+        &.isExpanded {
+          display: block;
+        }
+      }
+      .button {
+        color: $color-dark;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: $transition;
+        font-size: $base-size;
+        color:white;
+        margin-left: 0px;
+  
+        &:hover {
+          color: orange;
+        }
+      }
+      .hamburger {
+        display: block;
+        padding-right: 40px;
+        font-size: $base-size * 2;
+      }
+    }
+  }
+}

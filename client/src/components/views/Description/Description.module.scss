@@ -1,0 +1,23 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    .text {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        border-bottom: 2px solid #222f3e;
+        margin-bottom: 50px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+.root {
+  padding: 60px 30px 30px 30px;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 30px;
+
+
+}
+}

@@ -1,0 +1,12 @@
+@import '../../../styles/settings.scss';
+
+@media (max-width: 576px) {
+.root {
+  padding: 60px 30px 30px 30px;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 30px;
+
+
+}
+}

@@ -1,0 +1,110 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  @include flex(row, center, top);
+  flex-wrap: wrap;
+  padding: 130px 20px 10px 30px;
+  gap: 10px;
+
+  img {
+    height: 550px;
+    width: 450px;
+    object-fit: cover;
+  }
+
+  .description {
+    @include flex(column, space-between, left);
+    width: 500px;
+
+    h3 {
+      margin-bottom: 5px;
+      margin-left: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+      margin-left: 20px;
+    }
+
+    span {
+      font-size: $base-size - 3;
+    }
+    .box{
+      margin-left: 20px;
+    }
+
+    .errorMessage {
+      color: red;
+      font-weight: 700;
+    }
+
+    form {
+      @include flex(column, center, left);
+      gap: 10px;
+
+      .formInputSmall {
+        border: 1px solid $color-gray;
+        width: 90px;
+        outline: none;
+      }
+
+      .formInput {
+        border: 1px solid $color-gray;
+        outline: none;
+      }
+
+      .button {
+        padding: 40px;
+        color: orange;
+      }
+    }
+  }
+  .galleryImages{
+    padding-top: 35px;
+    padding-bottom: 30px;
+    position: relative;
+    display: block;
+    .galleryImageLeft{
+      float:left;
+      margin-right: 50px;
+      height: 250px;
+      position: relative;
+      img{
+      object-fit: cover;
+      width: 350px;
+      height: 300px;
+    }
+  }
+    .galleryImageRight{
+      float:left;
+      height: 300px;
+      position: relative;
+      img{
+        object-fit: cover;
+        width: 350px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+
+.gallery {
+  margin: 60px auto;
+}
+
+@media (max-width: 576px) {
+  .root {
+    img {
+      height: 400px;
+      width: 320px;
+      object-fit: cover;
+    }
+
+    .description {
+      @include flex(column, space-between, left);
+      width: 375px;
+      padding: 10px 20px;
+    }
+  }
+}

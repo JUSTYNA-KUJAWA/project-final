@@ -1,0 +1,24 @@
+@import '../../../styles/settings.scss';
+
+.arrivals{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  margin-top:15px; 
+
+}
+.root {
+  padding: 20px 30px 30px 30px;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: 30px;
+
+  a {
+    text-decoration: none;
+    color: orange;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/settings.scss';
+
+.carouselContainer{
+  position: relative;
+  .slide {
+    height: calc(100vh - 190px);
+    min-height: 300px;
+    position: relative;
+    img {
+      object-fit: cover;
+      height: 100%;
+      object-position: center;
+      filter: brightness(90%);
+    }
+  }
+}
